@@ -1,11 +1,12 @@
-<div class="header  row col-12">
-    <div class="col-3"> 
-    <app-logo></app-logo>
-   </div>
-   <div class="col-6">
-       <app-banner></app-banner>
-   </div>
-   <div class="col-3">
-       <app-redessociales></app-redessociales>
-   </div>
-</div>
+<nav class="navbar" style="background-color: #61afe7;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <app-logo></app-logo>
+        </a>
+        <app-redessociales></app-redessociales>
+        <form class="d-flex" role="search">
+            <button class="btn btn-outline-success" type="submit">Login</button>
+        </form>
+    </div>
+</nav>
+<app-banner></app-banner>
