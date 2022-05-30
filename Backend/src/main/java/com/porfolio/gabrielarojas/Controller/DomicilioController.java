@@ -35,13 +35,13 @@ public class DomicilioController {
                                   @RequestParam("pais") String pais,
                                   @RequestParam("provincia") String provincia
     ) {
-       Domicilio domicilio= domicilioService.findDomicilio(id);
+        Domicilio domicilio= domicilioService.findDomicilio(id);
         domicilio.setLocalidad(localidad);
         domicilio.setNombreCalle(nombre_calle);
         domicilio.setNumero(numero);
         domicilio.setProvincia(provincia);
         domicilio.setPais(pais);
-         domicilioService.saveDomicilio(domicilio);
-               return domicilio;
+        domicilioService.saveDomicilio(domicilio);
+        return domicilio;
     }
 }
