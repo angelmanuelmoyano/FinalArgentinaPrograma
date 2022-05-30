@@ -1,2 +1,7 @@
-package com.porfolio.gabrielarojas.Controller;public class ProyectosController {
+package com.porfolio.gabrielarojas.Controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ProyectosController {
 }
