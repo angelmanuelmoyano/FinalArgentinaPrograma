@@ -18,13 +18,13 @@ public class Educacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nombreInstitucion;
-    private String Carrera;
-    private Date fechaInicio;
-    private Date fechaFin;
-    private String logoInstitucion;
+    private String nombre_institucion;
+    private String carrera;
+    private Date fecha_inicio;
+    private Date fecha_fin;
+    private String logo_institucion;
     private String titulo;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "fk_persona", nullable = false)
-    private Persona persona;
+    private Persona fk_persona;
 }

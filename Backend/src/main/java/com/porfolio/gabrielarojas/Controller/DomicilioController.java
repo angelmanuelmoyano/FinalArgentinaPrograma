@@ -37,7 +37,7 @@ public class DomicilioController {
     ) {
         Domicilio domicilio= domicilioService.findDomicilio(id);
         domicilio.setLocalidad(localidad);
-        domicilio.setNombreCalle(nombre_calle);
+        domicilio.setNombre_calle(nombre_calle);
         domicilio.setNumero(numero);
         domicilio.setProvincia(provincia);
         domicilio.setPais(pais);

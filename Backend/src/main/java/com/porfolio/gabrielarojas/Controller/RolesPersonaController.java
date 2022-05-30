@@ -41,8 +41,8 @@ public class RolesPersonaController {
         Roles_Persona rolesPersona= rolesPersonaService.findRolesPersona(id);
         Roles rol= rolesService.findRol(fk_rol);
         Persona persona= personaService.findPersona(fk_persona);
-        rolesPersona.setPersona(persona);
-        rolesPersona.setRoles(rol);
+        rolesPersona.setFk_persona(persona);
+        rolesPersona.setFk_rol(rol);
         rolesPersonaService.saveRolesPersona(rolesPersona);
 
         return rolesPersona;

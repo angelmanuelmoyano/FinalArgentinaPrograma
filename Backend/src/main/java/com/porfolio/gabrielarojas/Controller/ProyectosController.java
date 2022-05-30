@@ -48,17 +48,17 @@ public class ProyectosController {
 
         Proyectos proyecto= proyectosService.findProyecto(id);
         proyecto.setDescripcion(descripcion);
-        proyecto.setNombreProyecto(nombre_proyecto);
+        proyecto.setNombre_proyecto(nombre_proyecto);
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         Date fechaRealizacion = formato.parse(fecha_realizacion);
-        proyecto.setFechaRealizacion(fechaRealizacion);
-        proyecto.setImagen1(imagen_1);
-        proyecto.setImagen2(imagen_2);
-        proyecto.setImagen3(imagen_3);
+        proyecto.setFecha_realizacion(fechaRealizacion);
+        proyecto.setImagen_1(imagen_1);
+        proyecto.setImagen_2(imagen_2);
+        proyecto.setImagen_3(imagen_3);
         proyecto.setLink(link);
-        proyecto.setLinkRepositorio(links_repositorio);
+        proyecto.setLink_repositorio(links_repositorio);
         Persona persona= personaService.findPersona(fk_persona);
-         proyecto.setPersona(persona);
+         proyecto.setFk_persona(persona);
          proyectosService.saveProyecto(proyecto);
         return proyecto;
     }

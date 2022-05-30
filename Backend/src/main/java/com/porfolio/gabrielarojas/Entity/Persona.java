@@ -26,9 +26,9 @@ public class Persona {
     @Size(min = 1, max = 50, message = "El campo contiene demasiado caracteres")
     private String apellido;
     @Column(name = "imagen_portada")
-    private String imagenPortada;
+    private String imagen_portada;
     @Column(name = "logo_portada")
-    private String logoPortada;
+    private String logo_portada;
 
     private String email;
 
@@ -44,24 +44,26 @@ public class Persona {
 
     private String  twiter;
 
+    private String numero_whasap;
+
     @OneToOne(cascade=CascadeType.ALL)
     @JoinColumn(name="fk_domicilio")
-    private Domicilio domicilio;
+    private Domicilio fk_domicilio;
 
 
-    @OneToOne(mappedBy = "persona")
-    private Roles_Persona rolesPersona;
+    @OneToOne(mappedBy = "fk_persona")
+    private Roles_Persona roles_persona;
 
-    @OneToMany(mappedBy = "persona")
+    @OneToMany(mappedBy = "fk_persona")
     private List<Educacion> educacion;
 
-    @OneToMany(mappedBy = "persona")
+    @OneToMany(mappedBy = "fk_persona")
     private List<Experiencia> experiencia;
 
-    @OneToMany(mappedBy = "persona")
+    @OneToMany(mappedBy = "fk_persona")
     private List<Habilidades> habilidades;
 
-    @OneToMany(mappedBy = "persona")
+    @OneToMany(mappedBy = "fk_persona")
     private List<Proyectos> proyectos;
 
 

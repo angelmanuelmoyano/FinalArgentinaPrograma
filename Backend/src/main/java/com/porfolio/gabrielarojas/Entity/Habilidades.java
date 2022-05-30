@@ -16,11 +16,11 @@ public class Habilidades {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private  String nombreHabilidad;
-    private int porcentajeAdquirido;
+    private  String nombre_habilidad;
+    private int porcentaje_adquirido;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "fk_persona", nullable = false)
-    private Persona persona;
+    private Persona fk_persona;
 
 }

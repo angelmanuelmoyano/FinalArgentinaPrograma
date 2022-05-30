@@ -45,13 +45,13 @@ public class ExperienciaController {
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         Date fechaFin = formato.parse(fecha_fin);
         Date fechaInicio = formato.parse(fecha_inicio);
-        experiencia.setFechaFin(fechaFin);
-        experiencia.setFechaInicio(fechaInicio);
-        experiencia.setNombreEmpresa(nombre_empresa);
+        experiencia.setFecha_fin(fechaFin);
+        experiencia.setFecha_inicio(fechaInicio);
+        experiencia.setNombre_empresa(nombre_empresa);
         experiencia.setPuesto(puesto);
         experiencia.setTelefono(telefono);
         Persona persona =  personaService.findPersona(fk_persona);
-        experiencia.setPersona(persona);
+        experiencia.setFk_persona(persona);
         experienciaService.saveExperiencia(experiencia);
 
         return experiencia;

@@ -2,8 +2,6 @@ package com.porfolio.gabrielarojas.Controller;
 
 import com.porfolio.gabrielarojas.Entity.Domicilio;
 import com.porfolio.gabrielarojas.Service.DomicilioService;
-import com.porfolio.gabrielarojas.Service.ExperienciaService;
-import com.porfolio.gabrielarojas.Service.HabilidadesService;
 import com.porfolio.gabrielarojas.Service.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -27,7 +25,7 @@ public class PersonaController {
         personaService.savePersona(persona);
         return "Persona Creada";
     }
-    @DeleteMapping("/persona/borrar/{id}")
+    @DeleteMapping("/personas/borrar/{id}")
     public String deletePersona(@PathVariable Long id){
         personaService.deletePersona(id);
         return "La persona fue eliminada";
@@ -45,12 +43,13 @@ public class PersonaController {
                               @RequestParam("twiter") String twiter,
                               @RequestParam("instagram,") String instagram,
                               @RequestParam("acercade") String acercade,
+                              @RequestParam("numero_whasap") String numero_whasap,
                               @RequestParam("fk_domicilio") long fk_domicilio){
 
         Persona persona= personaService.findPersona(id);
         persona.setNombre(nombre);
         persona.setApellido(apellido);
-        persona.setImagenPortada(imagen_portada);
+        persona.setImagen_portada(imagen_portada);
         persona.setAcercade(acercade);
         persona.setEmail(email);
         persona.setPassword(password);
@@ -58,9 +57,10 @@ public class PersonaController {
         persona.setInstagram(instagram);
         persona.setTwiter(twiter);
         persona.setLinkedin(linkedin);
-        persona.setLogoPortada(logo_portada);
+        persona.setLogo_portada(logo_portada);
+        persona.setNumero_whasap(numero_whasap);
         Domicilio domicilio= domicilioService.findDomicilio(fk_domicilio);
-        persona.setDomicilio(domicilio);
+        persona.setFk_domicilio(domicilio);
         personaService.savePersona(persona);
         return persona;
     }
