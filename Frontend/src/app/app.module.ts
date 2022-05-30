@@ -14,7 +14,7 @@ import { HardandsofComponent } from './components/hardandsof/hardandsof.componen
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
-import {HttpClient, HttpClientModule } from '@angular/common/http';
+import {HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,8 +42,7 @@ import {HttpClient, HttpClientModule } from '@angular/common/http';
       animationDuration: 300,
       
     }),
-    HttpClientModule,
-    HttpClient
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
