@@ -14,6 +14,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:9000")
 public class ProyectosController {
     @Autowired
     ProyectosService proyectosService;

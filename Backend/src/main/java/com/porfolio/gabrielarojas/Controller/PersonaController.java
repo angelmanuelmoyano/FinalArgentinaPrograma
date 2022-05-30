@@ -10,6 +10,7 @@ import com.porfolio.gabrielarojas.Entity.Persona;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:9000")
 public class PersonaController {
     @Autowired
     PersonaService personaService;
