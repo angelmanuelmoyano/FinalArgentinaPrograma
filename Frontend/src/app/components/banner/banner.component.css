@@ -1,0 +1,14 @@
+.thumbnail {
+    position: relative;
+}
+.caption {
+    position: absolute;
+    top: 9%;
+    left: 0;
+    width: 100%;
+    color: aliceblue;
+}
+.caption font{
+    font-size: 22px;
+}
+
