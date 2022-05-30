@@ -18,14 +18,14 @@ public class Experiencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nombreEmpresa;
+    private String nombre_empresa;
     private String puesto;
-    private Date fechaInicio;
-    private Date fechaFin;
+    private Date fecha_inicio;
+    private Date fecha_fin;
     private int telefono;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "fk_persona", nullable = false)
-    private Persona persona;
+    private Persona fk_persona;
 
 }

@@ -32,7 +32,7 @@ public class RolesController {
                               ){
 
         Roles rol= rolesService.findRol(id);
-        rol.setNombreRol(nombre_rol);;
+        rol.setNombre_rol(nombre_rol);;
          rolesService.saveRol(rol);
         return rol;
     }

@@ -17,18 +17,18 @@ public class Proyectos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nombreProyecto;
-    private Date fechaRealizacion;
+    private String nombre_proyecto;
+    private Date fecha_realizacion;
     private String link;
-    private String linkRepositorio;
+    private String link_repositorio;
     private String descripcion;
-    private String imagen1;
-    private String imagen2;
-    private String imagen3;
+    private String imagen_1;
+    private String imagen_2;
+    private String imagen_3;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "fk_persona", nullable = false)
-    private Persona persona;
+    private Persona fk_persona;
 
 
 }

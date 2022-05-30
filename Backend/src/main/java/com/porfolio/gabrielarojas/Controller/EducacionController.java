@@ -47,12 +47,12 @@ public class EducacionController {
                 SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
                 Date fechaFin = formato.parse(fecha_fin);
                 Date fechaInicio = formato.parse(fecha_inicio);
-                educacion.setFechaFin(fechaFin);
-                educacion.setFechaInicio(fechaInicio);
-                educacion.setLogoInstitucion(logo_institucion);
-                educacion.setNombreInstitucion(nombre_institucion);
+                educacion.setFecha_fin(fechaFin);
+                educacion.setFecha_inicio(fechaInicio);
+                educacion.setLogo_institucion(logo_institucion);
+                educacion.setNombre_institucion(nombre_institucion);
                 Persona persona= personaService.findPersona(fk_persona);
-                educacion.setPersona(persona);
+                educacion.setFk_persona(persona);
                 educacionService.saveEducacion(educacion);
                 return educacion;
         }

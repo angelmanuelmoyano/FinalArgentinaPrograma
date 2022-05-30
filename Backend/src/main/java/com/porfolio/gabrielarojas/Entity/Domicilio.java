@@ -17,12 +17,12 @@ public class Domicilio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "nombre_calle")
-    private String nombreCalle;
+    private String nombre_calle;
     private int numero;
     private String localidad;
     private String provincia;
     private String pais;
-    @OneToOne(mappedBy = "domicilio")
+    @OneToOne(mappedBy = "fk_domicilio")
     private Persona persona;
 
 

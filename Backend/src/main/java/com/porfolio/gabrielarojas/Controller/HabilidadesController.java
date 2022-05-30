@@ -37,10 +37,10 @@ public class HabilidadesController {
                                @RequestParam("fk_persona") long fk_persona){
 
         Habilidades habilidad= habilidadesService.findHabilidad(id);
-        habilidad.setNombreHabilidad(nombre_habilidad);
-        habilidad.setPorcentajeAdquirido(porcentaje_adquirido);
+        habilidad.setNombre_habilidad(nombre_habilidad);
+        habilidad.setPorcentaje_adquirido(porcentaje_adquirido);
         Persona persona= personaService.findPersona(fk_persona);
-        habilidad.setPersona(persona);
+        habilidad.setFk_persona(persona);
         habilidadesService.saveHabilidad(habilidad);
         return habilidad;
     }

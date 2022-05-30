@@ -17,9 +17,9 @@ public class Roles {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String nombreRol;
-    @OneToOne(mappedBy = "roles")
-    private Roles_Persona rolesPersona;
+    private String nombre_rol;
+    @OneToOne(mappedBy = "fk_rol")
+    private Roles_Persona roles_persona;
 
 
 }
