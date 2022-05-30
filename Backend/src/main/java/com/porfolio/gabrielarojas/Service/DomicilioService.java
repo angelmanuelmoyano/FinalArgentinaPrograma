@@ -1,6 +1,7 @@
 package com.porfolio.gabrielarojas.Service;
 
 import com.porfolio.gabrielarojas.Entity.Domicilio;
+import com.porfolio.gabrielarojas.Entity.Persona;
 import com.porfolio.gabrielarojas.Interface.IDomicilioService;
 import com.porfolio.gabrielarojas.Repository.DomicilioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,21 +17,24 @@ public class DomicilioService  implements IDomicilioService {
 
     @Override
     public List<Domicilio> getDomicilios() {
-        return null;
+        List<Domicilio> domicilios =domicilioRepository.findAll();
+        return domicilios;
+
     }
 
     @Override
     public void saveDomicilio(Domicilio domicilio) {
-
+      domicilioRepository.save(domicilio);
     }
 
     @Override
     public void deleteDomicilio(Long id) {
-
+     domicilioRepository.deleteById(id);
     }
 
     @Override
     public Domicilio findDomicilio(Long id) {
-        return null;
+        Domicilio domicilio = domicilioRepository.findById(id).orElse(null);;
+        return domicilio;
     }
 }

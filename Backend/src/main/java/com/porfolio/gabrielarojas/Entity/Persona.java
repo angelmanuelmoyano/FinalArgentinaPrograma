@@ -25,9 +25,9 @@ public class Persona {
     @NotNull
     @Size(min = 1, max = 50, message = "El campo contiene demasiado caracteres")
     private String apellido;
-
+    @Column(name = "imagen_portada")
     private String imagenPortada;
-
+    @Column(name = "logo_portada")
     private String logoPortada;
 
     private String email;
@@ -49,19 +49,19 @@ public class Persona {
     private Domicilio domicilio;
 
 
-    @OneToOne(mappedBy = "Roles_Persona")
+    @OneToOne(mappedBy = "persona")
     private Roles_Persona rolesPersona;
 
-    @OneToMany(mappedBy = "Educacion")
+    @OneToMany(mappedBy = "persona")
     private List<Educacion> educacion;
 
-    @OneToMany(mappedBy = "Experiencia")
+    @OneToMany(mappedBy = "persona")
     private List<Experiencia> experiencia;
 
-    @OneToMany(mappedBy = "Habilidades")
+    @OneToMany(mappedBy = "persona")
     private List<Habilidades> habilidades;
 
-    @OneToMany(mappedBy = "Proyectos")
+    @OneToMany(mappedBy = "persona")
     private List<Proyectos> proyectos;
 
 
