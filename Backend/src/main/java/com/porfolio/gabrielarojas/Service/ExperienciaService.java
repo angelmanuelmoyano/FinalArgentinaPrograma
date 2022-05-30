@@ -16,21 +16,23 @@ public class ExperienciaService implements IExperienciaService {
 
     @Override
     public List<Experiencia> getExperiencia() {
-        return null;
+        List<Experiencia> experiencias = experienciaRepository.findAll();
+        return experiencias;
     }
 
     @Override
     public void saveExperiencia(Experiencia experiencia) {
-
+            experienciaRepository.save(experiencia);
     }
 
     @Override
     public void deleteExperiencia(Long id) {
-
+           experienciaRepository.deleteById(id);
     }
 
     @Override
     public Experiencia findExperiencia(Long id) {
-        return null;
+        Experiencia experiencia= experienciaRepository.findById(id).orElse(null);
+        return experiencia;
     }
 }
