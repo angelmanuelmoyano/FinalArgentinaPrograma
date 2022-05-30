@@ -21,7 +21,7 @@ public class PersonaController {
         personaService.savePersona(persona);
         return "Persona Creada";
     }
-    @DeleteMapping("7persona/borrar/{id}")
+    @DeleteMapping("/persona/borrar/{id}")
     public String deletePersona(@PathVariable Long id){
         personaService.deletePersona(id);
         return "La persona fue eliminada";
