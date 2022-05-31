@@ -16,6 +16,8 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import {HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
+import { PorfolioComponent } from './components/porfolio/porfolio.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,8 @@ import { LoginComponent } from './components/login/login.component';
     HardandsofComponent,
     ProyectosComponent,
     EducacionComponent,
-    LoginComponent
+    LoginComponent,
+    PorfolioComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { LoginComponent } from './components/login/login.component';
       animationDuration: 300,
       
     }),
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
