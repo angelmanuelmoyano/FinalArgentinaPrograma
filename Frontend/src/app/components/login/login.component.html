@@ -1,12 +1,17 @@
-<!--<form [formGroup]="form" class="m-5" (ngSubmit)="onEnviar($event)">
-      <input type="email"  formControlName="email" class="form-control" id="email" [ngClass]="{'is-invalid':Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email.touched}"
+<form [formGroup]="form" class="m-5" (ngSubmit)="onEnviar($event)">
+      <input type="email"  formControlName="email" class="form-control" id="email" 
+      [ngClass]="{'is-invalid':Email?.errors && Email?.touched, 
+      'is-valid': !Email?.errors && Email.touched}"
       >
     <div *ngIf="Email?.errors && Email?.touched">
         <p *ngIf="Email.hasError('required')" class="text-danger">
             El email es requerido
         </p>
     </div>
-  <input type="password"  formControlName="password" class="form-control" id="password">
+  <input type="password"  formControlName="password"  
+  [ngClass]="{'is-invalid': Password?.errors && Password?.touched,
+  'is-valid':!Password?.errors && Password?.touched}" class="form-control" id="password">
+  
   <div *ngIf="Password?.errors && Password?.touched">
     <p *ngIf="Password?.hasError('required')" class="text-danger">
         El Password es requerido
@@ -16,4 +21,4 @@
     </p>
   </div>  
   <button type="submit" class="btn btn-primary">Iniciar Sesion</button>  
-</form>-->
+</form>

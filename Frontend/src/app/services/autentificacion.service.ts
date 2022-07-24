@@ -20,4 +20,8 @@ url="http://localhost:9000/personas/auth";
       return data;
     }))
    }
+
+   get UsuarioAutentificado(){
+      return this.currentUserSubject.value;
+   }
 }
