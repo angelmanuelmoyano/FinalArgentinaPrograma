@@ -17,6 +17,7 @@ url="http://localhost:9000/personas/auth";
 
     return this.http.post(this.url,credenciales).pipe(map(data=>{
       sessionStorage.setItem('currenUser',JSON.stringify(data))
+      this.currentUserSubject.next(data);
       return data;
     }))
    }
